@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Artisan;
 
 class EnumMakeCommandTest extends TestCase
 {
+    public $mockConsoleOutput = false;
+
     /** @test */
     public function make_command()
     {
