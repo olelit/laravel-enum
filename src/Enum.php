@@ -91,10 +91,22 @@ abstract class Enum extends MyCLabsEnum
     }
 
     /**
-     * Returns validation rule.
+     * Returns the validation rule (to validate by value).
+     *
+     * @return EnumRule
      */
     public static function rule(): EnumRule
     {
-        return new EnumRule(static::class);
+        return new EnumRule(static::class, false);
+    }
+
+    /**
+     * Returns the validation rule (to validate by key).
+     *
+     * @return EnumRule
+     */
+    public static function ruleByKey(): EnumRule
+    {
+        return new EnumRule(static::class, true);
     }
 }
