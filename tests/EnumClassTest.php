@@ -96,4 +96,15 @@ class EnumClassTest extends TestCase
             (new PostStatusEnum)->getConstList(true)
         );
     }
+
+    /** @test */
+    public function to_array_without_defalut()
+    {
+        $this->assertSame(
+            [
+                'FOO' => 'foo',
+            ],
+            WithoutDefaultEnum::toArray(false)
+        );
+    }
 }
