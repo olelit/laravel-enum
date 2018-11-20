@@ -75,7 +75,7 @@ abstract class Enum extends MyCLabsEnum
     {
         $result = parent::toArray();
 
-        if (isset($result['__default']) and ! $include_default) {
+        if (! $include_default) {
             unset($result['__default']);
         }
 
