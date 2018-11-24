@@ -4,10 +4,13 @@ All Notable changes to `laravel-enum` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## [Unreleased]
+## 1.2.0 - 2018-11-24
 
 ### Added
-- Add support to validate enum key
+- Support to validate enum by key
+
+### Fixed
+- `toArray(false)` now not returns `__default => null` if `__default` not defined
 
 ## 1.1.0 - 2018-09-23
 
