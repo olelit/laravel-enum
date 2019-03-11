@@ -4,6 +4,10 @@ All Notable changes to `laravel-enum` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 1.3.0 - 2019-03-11
+
+Laravel 5.8 support
+
 ## 1.2.0 - 2018-11-24
 
 ### Added
