@@ -248,6 +248,12 @@ PostStatusEnum::PENDING()->is($status); // true
 PostStatusEnum::PUBLISHED()->is($status->getValue()); // false
 
 PostStatusEnum::PENDING()->is($status->getValue()); // true
+
+// OR TEST MULTIPLE
+
+$status->is([PostStatusEnum::DRAFT(), PostStatusEnum::Published()]) // false
+
+$status->is([PostStatusEnum::DRAFT(), PostStatusEnum::Pending()]) // true
 ```
 
 ### rule(): EnumRule

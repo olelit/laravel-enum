@@ -21,6 +21,15 @@ class EnumClassTest extends TestCase
     }
 
     /** @test */
+    public function is_from_iterable()
+    {
+        $Enum = new PostStatusEnum;
+
+        $this->assertTrue($Enum->is([PostStatusEnum::DRAFT, PostStatusEnum::PENDING]));
+        $this->assertFalse($Enum->is([PostStatusEnum::DRAFT]));
+    }
+
+    /** @test */
     public function is_by_object()
     {
         $Enum = PostStatusEnum::PENDING();
