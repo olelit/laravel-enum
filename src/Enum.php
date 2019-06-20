@@ -71,18 +71,18 @@ abstract class Enum extends MyCLabsEnum
         if (is_iterable($value)) {
             return $this->isAny($value);
         }
-        
+
         return $this->getValue() === ($value instanceof self ? $value->getValue() : $value);
     }
-    
-    public function isAny(iterable $values) 
+
+    public function isAny(iterable $values)
     {
         foreach ($values as $value) {
             if ($this->is($value)) {
                 return true;
             }
         }
-        
+
         return false;
     }
 
