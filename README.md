@@ -243,17 +243,17 @@ PostStatusEnum::PUBLISHED()->is($status); // false
 
 PostStatusEnum::PENDING()->is($status); // true
 
-// OR
+// or
 
 PostStatusEnum::PUBLISHED()->is($status->getValue()); // false
 
 PostStatusEnum::PENDING()->is($status->getValue()); // true
 
-// OR TEST MULTIPLE
+// or check one of multiple values
 
-$status->is([PostStatusEnum::DRAFT(), PostStatusEnum::Published()]) // false
+$status->is([PostStatusEnum::DRAFT(), PostStatusEnum::PUBLISHED()]) // false
 
-$status->is([PostStatusEnum::DRAFT(), PostStatusEnum::Pending()]) // true
+$status->is([PostStatusEnum::DRAFT(), PostStatusEnum::PENDING()]) // true
 ```
 
 ### rule(): EnumRule

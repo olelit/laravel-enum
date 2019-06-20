@@ -4,6 +4,10 @@ All Notable changes to `laravel-enum` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 1.4.0 - 2019-06-20
+
+Added ability to check multiple enum values with `is()` or `isAny()` methods
+
 ## 1.3.0 - 2019-03-11
 
 Laravel 5.8 support
