@@ -19,7 +19,7 @@ class EnumClassTest extends TestCase
 
         $this->assertTrue($Enum->is(PostStatusEnum::PENDING));
     }
-    
+
     /** @test */
     public function is_from_iterable()
     {
