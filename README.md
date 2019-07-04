@@ -70,6 +70,12 @@ Make new Enum class via artisan command
 php artisan make:enum PostStatusEnum
 ```
 
+or to populate with your own values
+
+```bash
+php artisan make:enum PostStatusEnum DRAFT=draft PENDING=pending PUBLISHED=published
+```
+
 Create instance of Enum class
 
 ``` php
