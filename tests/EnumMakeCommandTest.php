@@ -2,8 +2,8 @@
 
 namespace MadWeb\Enum\Test;
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Artisan;
 
 class EnumMakeCommandTest extends TestCase
 {
@@ -27,7 +27,7 @@ class EnumMakeCommandTest extends TestCase
         $this->assertContains('Enum created successfully', Artisan::output());
         $this->assertFileExists($this->app->basePath("app/Enums/{$arguments['name']}.php"));
         $this->assertFileEquals(
-            __DIR__ . "/fixtures/{$arguments['name']}.php",
+            __DIR__."/fixtures/{$arguments['name']}.php",
             $this->app->basePath("app/Enums/{$arguments['name']}.php")
         );
     }
@@ -36,19 +36,19 @@ class EnumMakeCommandTest extends TestCase
     {
         return [
             [[
-                'name' => 'MyEnumNoArguments']
-            ],
+                'name' => 'MyEnumNoArguments',
+            ]],
             [[
                 'name' => 'MyEnumValuelessArguments',
-                'values' => ['SMALL', 'MEDIUM', 'LARGE']
+                'values' => ['SMALL', 'MEDIUM', 'LARGE'],
             ]],
             [[
                 'name' => 'MyEnumValuedArguments',
-                'values' => ['SMALL=s', 'MEDIUM=m', 'LARGE=l']
+                'values' => ['SMALL=s', 'MEDIUM=m', 'LARGE=l'],
             ]],
             [[
                 'name' => 'MyEnumMixedValueValuelessArguments',
-                'values' => ['WITH1=with1', 'WITHOUT1', 'WITH2=with2', 'WITHOUT2', 'WITHOUT3', 'WITH3=with3']
+                'values' => ['WITH1=with1', 'WITHOUT1', 'WITH2=with2', 'WITHOUT2', 'WITHOUT3', 'WITH3=with3'],
             ]],
         ];
     }
