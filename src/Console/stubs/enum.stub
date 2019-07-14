@@ -5,15 +5,11 @@ namespace DummyNamespace;
 use MadWeb\Enum\Enum;
 
 /**
- * @method static DummyClass FOO()
- * @method static DummyClass BAR()
- * @method static DummyClass BAZ()
+DOCBLOCK
  */
 final class DummyClass extends Enum
 {
-    const __default = self::FOO;
+    const __default = self::DEFAULTVALUE;
 
-    const FOO = 0;
-    const BAR = 1;
-    const BAZ = 2;
+CONSTLIST
 }
