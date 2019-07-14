@@ -4,6 +4,10 @@ All Notable changes to `laravel-enum` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 1.5.0 - 2019-07-14
+
+Added ability to pass custom values into `make:enum` command. [check out](README.md#usage)
+
 ## 1.4.0 - 2019-06-20
 
 Added ability to check multiple enum values with `is()` or `isAny()` methods

@@ -64,13 +64,13 @@ If you use Laravel 5.4 version, add service provider into `app.php` config file
 
 ## Usage
 
-Make new Enum class via artisan command
+Make new Enum class via artisan command:
 
 ```bash
 php artisan make:enum PostStatusEnum
 ```
 
-or to populate with your own values
+to populate Enum with your own values, pass it after `name` argument:
 
 ```bash
 php artisan make:enum PostStatusEnum DRAFT=draft PENDING=pending PUBLISHED=published
