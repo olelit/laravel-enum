@@ -4,6 +4,12 @@ All Notable changes to `laravel-enum` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 1.6.0 - 2019-09-06
+
+- Laravel 6.0 support
+- Minimum required PHP version upped to 7.2
+- Dropped support of unsupported Laravel versions
+
 ## 1.5.0 - 2019-07-14
 
 Added ability to pass custom values into `make:enum` command. [check out](README.md#usage)

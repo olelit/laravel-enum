@@ -9,7 +9,7 @@ class EnumMakeCommandTest extends TestCase
 {
     public $mockConsoleOutput = false;
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         File::deleteDirectory($this->app->basePath('app/Enums'));
         parent::tearDown();
