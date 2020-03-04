@@ -2,7 +2,6 @@
 
 namespace MadWeb\Enum\Test;
 
-use MadWeb\Enum\EnumCastable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
