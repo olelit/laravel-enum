@@ -45,21 +45,12 @@ final class PostStatusEnum extends Enum
 
 ## Installation
 
+For **Laravel < 7** version - use [1.0 branch](https://github.com/mad-web/laravel-enum/tree/1.0).
+
 You can install the package via composer:
 
 ```bash
 composer require mad-web/laravel-enum
-```
-
-If you use Laravel 5.4 version, add service provider into `app.php` config file
-
-```php
-// config/app.php
-
-'providers' => [
-    ...
-    \MadWeb\Enum\EnumServiceProvider::class,
-],
 ```
 
 ## Usage
@@ -85,13 +76,12 @@ $status = new PostStatusEnum(PostStatusEnum::PENDING);
 $status = PostStatusEnum::PENDING();
 ```
 
-In order to use enum values with Eloquent models you could use `EnumCastable` trait.
+Enums support native [Custom Casts](https://laravel.com/docs/7.x/eloquent-mutators#custom-casts) feature out of the box.
+Specify Enum class for attribute in `$casts` array:
 
 ```php
 class Post extends Model
 {
-    use EnumCastable;
-
     protected $fillable = ['title', 'status'];
 
     protected $casts = [
@@ -195,11 +185,10 @@ To customize validation message, add `enum` key to validation lang file
 
 ```php
 // resources/lang/en/validation.php
-    ...
-    'email' => 'The :attribute must be a valid email address.',
-    'enum' => 'Custom validation message form enum attribute :attribute', // Custom message
-    'exists' => 'The selected :attribute is invalid.',
-    ...
+return [
+    //...
+    'enum' => 'Custom validation message form enum attribute :attribute',
+];
 ```
 
 ## Additional methods

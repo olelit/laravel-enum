@@ -4,6 +4,15 @@ All Notable changes to `laravel-enum` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 2.0.0 - 2020-03-04
+
+- Laravel 7.x support
+- PHP 7.4 support
+- Dropped all laravel versions lower then 7
+- Minimum required PHP version upped to 7.2.5
+- Implemented enum casting with native custom casts feature
+- Now exception will be throwed if you trying to save invalid enum value
+
 ## 1.6.0 - 2019-09-06
 
 - Laravel 6.0 support
