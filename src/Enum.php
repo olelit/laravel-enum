@@ -2,11 +2,15 @@
 
 namespace MadWeb\Enum;
 
+use Illuminate\Container\Container;
+use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use MadWeb\Enum\Rules\EnumRule;
 use MyCLabs\Enum\Enum as MyCLabsEnum;
 
-abstract class Enum extends MyCLabsEnum
+abstract class Enum extends MyCLabsEnum implements CastsAttributes
 {
+    use EnumCastable;
+
     /**
      * Default enum value.
      */
@@ -17,7 +21,7 @@ abstract class Enum extends MyCLabsEnum
      */
     public function __construct($value = null)
     {
-        if (is_null($value)) {
+        if ($value === null) {
             $value = static::__default;
         }
 
@@ -63,7 +67,7 @@ abstract class Enum extends MyCLabsEnum
             $value
         );
 
-        return trans()->has($lang_key) ? __($lang_key) : $value;
+        return Container::getInstance()->make('translator')->has($lang_key) ? __($lang_key) : $value;
     }
 
     public function is($value)

@@ -5,6 +5,9 @@ namespace MadWeb\Enum\Test;
 use MadWeb\Enum\EnumCastable;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property \MadWeb\Enum\Test\PostStatusEnum $status
+ */
 class Post extends Model
 {
     use EnumCastable;

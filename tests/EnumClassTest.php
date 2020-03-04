@@ -68,7 +68,7 @@ class EnumClassTest extends TestCase
     {
         $value = PostStatusEnum::randomValue();
 
-        $this->assertContains($value, PostStatusEnum::values());
+        $this->assertContains($value, PostStatusEnum::toArray());
     }
 
     /** @test */

@@ -2,20 +2,23 @@
 
 namespace MadWeb\Enum;
 
+/**
+ * @mixin \MadWeb\Enum\Enum
+ * @internal Uses for custom casting implementation
+ */
 trait EnumCastable
 {
-    protected function castAttribute($key, $value)
+    public function get($model, string $key, $value, array $attributes)
     {
-        $castedValue = parent::castAttribute($key, $value);
+        return new static($value);
+    }
 
-        if ($castedValue === $value and ! is_object($value)) {
-            $cast_type = $this->getCasts()[$key];
-
-            if (class_exists($cast_type) and is_subclass_of($cast_type, Enum::class)) {
-                $castedValue = new $cast_type($value);
-            }
+    public function set($model, string $key, $value, array $attributes)
+    {
+        if ($value instanceof static) {
+            return $value->getValue();
         }
 
-        return $castedValue;
+        return (new static($value))->getValue();
     }
 }
