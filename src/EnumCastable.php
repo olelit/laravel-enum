@@ -8,6 +8,10 @@ namespace MadWeb\Enum;
  */
 trait EnumCastable
 {
+    abstract public function __construct($value = null);
+
+    abstract public function getValue();
+
     public function get($model, string $key, $value, array $attributes)
     {
         return new static($value);

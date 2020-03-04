@@ -10,8 +10,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Post extends Model
 {
-    use EnumCastable;
-
     public $timestamps = false;
 
     protected $fillable = ['title', 'status'];
