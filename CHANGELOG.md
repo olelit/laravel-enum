@@ -8,10 +8,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 - Laravel 7.x support
 - PHP 7.4 support
-- Dropped all laravel versions lower then 7
+- Dropped all laravel versions lower than 7
 - Minimum required PHP version upped to 7.2.5
 - Implemented enum casting with native custom casts feature
-- Now exception will be throwed if you trying to save invalid enum value
+- Exception will be thrown if you were trying to save invalid enum value
 
 ## 1.6.0 - 2019-09-06
 
