@@ -4,6 +4,12 @@ All Notable changes to `laravel-enum` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 2.2.0 - 2020-12-21
+
+- PHP 8 support
+- Dropped PHP 7.2 support
+- Migrated to GitHub actions
+
 ## 2.1.0 - 2020-09-24
 
 Laravel 8 support
