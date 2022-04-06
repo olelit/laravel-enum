@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
+
 # Elegant Enum implementation for Laravel
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
@@ -159,7 +161,7 @@ public function store(Request $request)
 }
 ```
 
-If you want to validate an enum key instead of an enum value you can by specifying you want to validate against the key 
+If you want to validate an enum key instead of an enum value you can by specifying you want to validate against the key
 instead of the value.
 
 ``` php
@@ -176,7 +178,7 @@ public function store(Request $request)
     ]);
 }
 ```
- 
+
 ---
 
 To customize validation message, add `enum` key to validation lang file
